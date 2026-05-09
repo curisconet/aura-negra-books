@@ -163,7 +163,11 @@ const PageCarousel = () => {
             <img 
               src={`/books/${img}`} 
               alt={`Página interna ${i+1}`} 
-              className="w-full h-auto object-cover rounded-xl shadow-[0_0_40px_rgba(0,0,0,0.8)] border border-white/[0.08]" 
+              width="600"
+              height="800"
+              loading={i < 2 ? "eager" : "lazy"}
+              decoding="async"
+              className="w-full h-auto aspect-[3/4] object-cover rounded-xl shadow-[0_0_40px_rgba(0,0,0,0.8)] border border-white/[0.08]" 
             />
           </div>
         ))}
@@ -258,7 +262,7 @@ const Index = () => {
               <span className="text-foreground">20.000 livros</span> sobre magia, esoterismo, ocultismo e desenvolvimento humano. Na palma da sua mão. Por um único pagamento.
             </p>
             <div className="flex justify-center mb-8 sm:mb-10 w-full max-w-2xl mx-auto">
-              <img src="/books/hero-mockup.png" alt="Acervo de Livros" className="w-full h-auto drop-shadow-2xl hover:-translate-y-2 transition-transform duration-700" />
+              <img src="/books/hero-mockup.png" alt="Acervo de Livros" width="1254" height="1254" fetchPriority="high" className="w-full h-auto drop-shadow-2xl hover:-translate-y-2 transition-transform duration-700" />
             </div>
             <a href="#planos" className="inline-block">
               <Button size="lg" className="bg-blood hover:bg-blood-bright text-white text-xs sm:text-sm tracking-widest uppercase px-6 sm:px-8 py-6 sm:py-7 rounded-xl glow-blood transition-all hover:scale-[1.03]">
@@ -425,7 +429,7 @@ const Index = () => {
                 </div>
                 <p className="text-foreground/85 leading-relaxed text-sm mb-6 font-light italic flex-grow">"{t.text}"</p>
                 <div className="pt-5 border-t border-white/[0.06] flex items-center gap-4">
-                  <img src={`/books/${t.avatar}`} alt={t.name} className="w-12 h-12 rounded-full object-cover border border-white/10 shrink-0" />
+                  <img src={`/books/${t.avatar}`} alt={t.name} width="48" height="48" loading="lazy" decoding="async" className="w-12 h-12 rounded-full object-cover border border-white/10 shrink-0" />
                   <div>
                     <div className="font-serif text-base">{t.name}</div>
                     <div className="text-xs text-muted-foreground tracking-wide">{t.local}</div>
