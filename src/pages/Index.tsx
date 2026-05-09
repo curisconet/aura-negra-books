@@ -466,9 +466,11 @@ const Index = () => {
                   <li key={i} className="flex gap-3 text-muted-foreground/55"><X className="w-4 h-4 mt-0.5 shrink-0" />{i}</li>
                 ))}
               </ul>
-              <Button variant="outline" className="w-full bg-white/[0.02] border-white/10 hover:bg-white/[0.06] hover:border-gold/40 hover:text-gold rounded-xl py-6 text-[11px] sm:text-xs tracking-widest uppercase">
-                Começar com o Básico
-              </Button>
+              <a href="https://pay.wiapy.com/p3LGNaAQNw" className="block w-full">
+                <Button variant="outline" className="w-full bg-white/[0.02] border-white/10 hover:bg-white/[0.06] hover:border-gold/40 hover:text-gold rounded-xl py-6 text-[11px] sm:text-xs tracking-widest uppercase">
+                  Começar com o Básico
+                </Button>
+              </a>
             </div>
 
             {/* Premium */}
@@ -493,9 +495,11 @@ const Index = () => {
                   <li key={i} className="flex gap-3 text-foreground/95"><Check className="w-4 h-4 text-gold mt-0.5 shrink-0" />{i}</li>
                 ))}
               </ul>
-              <Button className="w-full bg-blood hover:bg-blood-bright text-white rounded-xl py-6 text-[11px] sm:text-xs tracking-widest uppercase glow-blood transition-all hover:scale-[1.02]">
-                Acessar o Acervo Completo
-              </Button>
+              <a href="https://pay.wiapy.com/ln49QPJpJk" className="block w-full">
+                <Button className="w-full bg-blood hover:bg-blood-bright text-white rounded-xl py-6 text-[11px] sm:text-xs tracking-widest uppercase glow-blood transition-all hover:scale-[1.02]">
+                  Acessar o Acervo Completo
+                </Button>
+              </a>
               <p className="text-center text-[11px] text-muted-foreground mt-4">Pagamento seguro · Acesso em minutos</p>
             </div>
           </div>
